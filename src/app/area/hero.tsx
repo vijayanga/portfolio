@@ -1,14 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  ArrowDown,
-  Download,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { ArrowDown, Download, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
