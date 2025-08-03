@@ -52,7 +52,7 @@ export default function Hero() {
   const handleDownloadCV = () => {
     // Create a temporary link to download CV
     const link = document.createElement("a");
-    link.href = "/cv/Vijayanga_Dissanayaka_CV.pdf"; // You'll need to add your CV to public/cv/
+    link.href = "/cv/Mycv.pdf"; // You'll need to add your CV to public/cv/
     link.download = "Vijayanga_Dissanayaka_CV.pdf";
     document.body.appendChild(link);
     link.click();

@@ -8,9 +8,12 @@ import Footer from "./Common/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Doe - IT Student Portfolio",
+  title: "Vijayanga Dissanayaka's Portfolio",
+  icons: {
+    icon: "/logo/logo.png", // Link to the logo image file located in the 'public' folder
+  },
   description:
-    "Portfolio website of John Doe, IT undergraduate student showcasing projects and skills",
+    "Portfolio website of Vijayanga Dissanayaka , IT undergraduate student showcasing projects and skills",
 };
 
 export default function RootLayout({
