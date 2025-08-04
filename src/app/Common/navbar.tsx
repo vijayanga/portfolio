@@ -33,8 +33,14 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-2xl font-bold gradient-text">
-            Portfolio
+          {/* Logo Image and Text */}
+          <Link href="/" className="flex items-center ">
+            <img
+              src="/logo/logo.png"
+              alt="Portfolio Logo"
+              className="w-10 h-10 mask-radial-center" // Adjusted size for better fit
+            />
+            <span className="text-2xl font-bold gradient-text">Portfolio</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,6 +62,7 @@ export default function Navbar() {
             size="icon"
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
