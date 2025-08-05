@@ -1,14 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  /* Animated background for light mode with VERY LIGHT colors */
+  --background: radial-gradient(circle at 10% 20%, oklch(0.99 0.15 240) 0%, transparent 40%), /* Very Light Vibrant Blue */
+    radial-gradient(circle at 90% 80%, oklch(0.99 0.15 300) 0%, transparent 40%), /* Very Light Vibrant Purple */
+    radial-gradient(circle at 50% 0%, oklch(0.99 0.15 60) 0%, transparent 40%), /* Very Light Vibrant Yellow */
+    radial-gradient(circle at 0% 100%, oklch(0.99 0.15 180) 0%, transparent 40%), /* Very Light Vibrant Cyan */
+    radial-gradient(circle at 100% 0%, oklch(0.99 0.15 10) 0%, transparent 40%), /* Very Light Vibrant Red */
+    radial-gradient(circle at 20% 80%, oklch(0.99 0.15 120) 0%, transparent 40%), /* Very Light Vibrant Green */
+    radial-gradient(circle at 80% 20%, oklch(0.99 0.15 330) 0%, transparent 40%); /* Very Light Vibrant Magenta */
+  --background-size: 400% 400%; /* Even larger for more movement */
+  --background-position: 0% 0%; /* Initial position */
   --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
+  --card: oklch(0.99 0.01 240); /* Very light, subtle blue tint for light mode card background */
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -39,27 +46,55 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* New card background colors for light mode (more subtle) - these are for the About page cards */
+  --card-bg-1: oklch(0.98 0.02 260); /* Very light cool blue */
+  --card-bg-2: oklch(0.98 0.02 100); /* Very light warm green */
+  --card-bg-3: oklch(0.98 0.02 320); /* Very light soft pink */
+
+  /* Light Mode Badge Colors (more refined) */
+  --badge-bg-light-1: oklch(0.95 0.03 240); /* Light Blue */
+  --badge-text-light-1: oklch(0.3 0.08 240); /* Dark Blue */
+  --badge-hover-light-1: oklch(0.9 0.05 240);
+
+  --badge-bg-light-2: oklch(0.95 0.03 120); /* Light Green */
+  --badge-text-light-2: oklch(0.3 0.08 120); /* Dark Green */
+  --badge-hover-light-2: oklch(0.9 0.05 120);
+
+  --badge-bg-light-3: oklch(0.95 0.03 300); /* Light Purple */
+  --badge-text-light-3: oklch(0.3 0.08 300); /* Dark Purple */
+  --badge-hover-light-3: oklch(0.9 0.05 300);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  /* Animated background for dark mode with MORE DARK colors */
+  --background: radial-gradient(circle at 10% 20%, oklch(0.18 0.15 240) 0%, transparent 40%), /* Darker Vibrant Blue */
+    radial-gradient(circle at 90% 80%, oklch(0.18 0.15 300) 0%, transparent 40%), /* Darker Vibrant Purple */
+    radial-gradient(circle at 50% 0%, oklch(0.18 0.15 60) 0%, transparent 40%), /* Darker Vibrant Yellow */
+    radial-gradient(circle at 0% 100%, oklch(0.18 0.15 180) 0%, transparent 40%), /* Darker Vibrant Cyan */
+    radial-gradient(circle at 100% 0%, oklch(0.18 0.15 10) 0%, transparent 40%), /* Darker Vibrant Red */
+    radial-gradient(circle at 20% 80%, oklch(0.18 0.15 120) 0%, transparent 40%), /* Darker Vibrant Green */
+    radial-gradient(circle at 80% 20%, oklch(0.18 0.15 330) 0%, transparent 40%); /* Darker Vibrant Magenta */
+  --background-size: 400% 400%; /* Even larger for more movement */
+  --background-position: 0% 0%; /* Initial position */
+
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
+  --card: oklch(0.1 0.01 240); /* Very dark, subtle blue tint for dark mode card background */
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
+  --popover: oklch(0.16 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.985 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
+  --muted-foreground: oklch(0.85 0 0); /* Increased lightness for much better contrast */
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
+  --border: oklch(0.5 0 0); /* Increased lightness for better visibility */
+  --input: oklch(0.5 0 0); /* Increased lightness for better visibility */
   --ring: oklch(0.439 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
@@ -68,12 +103,30 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* New card background colors for dark mode (more subtle) - these are for the About page cards */
+  --card-bg-1: oklch(0.2 0.02 260); /* Dark cool blue */
+  --card-bg-2: oklch(0.2 0.02 100); /* Dark warm green */
+  --card-bg-3: oklch(0.2 0.02 320); /* Dark soft pink */
+
+  /* Dark Mode Badge Colors (more refined) */
+  --badge-bg-dark-1: oklch(0.2 0.03 240); /* Dark Blue */
+  --badge-text-dark-1: oklch(0.8 0.08 240); /* Light Blue */
+  --badge-hover-dark-1: oklch(0.25 0.05 240);
+
+  --badge-bg-dark-2: oklch(0.2 0.03 120); /* Dark Green */
+  --badge-text-dark-2: oklch(0.8 0.08 120); /* Light Green */
+  --badge-hover-dark-2: oklch(0.25 0.05 120);
+
+  --badge-bg-dark-3: oklch(0.2 0.03 300); /* Dark Purple */
+  --badge-text-dark-3: oklch(0.8 0.08 300); /* Light Purple */
+  --badge-hover-dark-3: oklch(0.25 0.05 300);
 }
 
 @theme inline {
@@ -115,12 +168,40 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Apply the animated background */
+    background-image: var(--background);
+    background-size: var(--background-size);
+    animation: gradient-shift 40s ease infinite; /* Speed adjusted to 40s */
+    background-attachment: fixed; /* Keep background fixed while scrolling */
+    @apply text-foreground scroll-smooth;
+  }
+  /* New utility class for frosted glass effect */
+  .backdrop-blur-sm-custom {
+    backdrop-filter: blur(8px); /* Adjust blur amount as needed */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
   }
 }
 
