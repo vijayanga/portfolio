@@ -67,7 +67,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-card"
+              className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-[var(--card-bg-2)]"
             >
               <div className="aspect-video overflow-hidden">
                 <img
