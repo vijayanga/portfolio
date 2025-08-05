@@ -1,5 +1,8 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils"; // Assuming cn utility is available
 
 const skillCategories = [
   {
@@ -37,6 +40,18 @@ const skillCategories = [
   },
 ];
 
+const getBadgeColors = (idx: number) => {
+  const colorIndex = (idx % 3) + 1; // Cycle through 3 color sets
+  return {
+    lightBg: `var(--badge-bg-light-${colorIndex})`,
+    lightText: `var(--badge-text-light-${colorIndex})`,
+    lightHover: `var(--badge-hover-light-${colorIndex})`,
+    darkBg: `var(--badge-bg-dark-${colorIndex})`,
+    darkText: `var(--badge-text-dark-${colorIndex})`,
+    darkHover: `var(--badge-hover-dark-${colorIndex})`,
+  };
+};
+
 export default function Skills() {
   return (
     <section id="skills" className="py-20 bg-background">
@@ -49,34 +64,44 @@ export default function Skills() {
             Technologies and tools I work with to bring ideas to life.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card
-              key={index}
-              className="hover:shadow-lg transition-shadow duration-300 bg-card"
-            >
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-foreground">
-                  {category.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge
-                      key={skillIndex}
-                      variant="secondary"
-                      className="text-sm py-1 px-3 bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors
-                      dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {skillCategories.map((category, index) => {
+            return (
+              <Card
+                key={index}
+                className={cn(
+                  "hover:shadow-lg transition-shadow duration-300 backdrop-blur-sm-custom border border-border",
+                  "bg-card/80" // Use the --card variable with transparency
+                )}
+              >
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold text-foreground">
+                    {category.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => {
+                      const colors = getBadgeColors(skillIndex);
+                      return (
+                        <Badge
+                          key={skillIndex}
+                          variant="secondary" // Keep variant secondary for base styling if needed, but override colors
+                          className={cn(
+                            "text-sm py-1 px-3 border border-transparent rounded-full",
+                            `bg-[${colors.lightBg}] text-[${colors.lightText}] hover:bg-[${colors.lightHover}]`,
+                            `dark:bg-[${colors.darkBg}] dark:text-[${colors.darkText}] dark:hover:bg-[${colors.darkHover}]`
+                          )}
+                        >
+                          {skill}
+                        </Badge>
+                      );
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

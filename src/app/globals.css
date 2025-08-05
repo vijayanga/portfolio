@@ -15,7 +15,7 @@
   --background-size: 400% 400%; /* Even larger for more movement */
   --background-position: 0% 0%; /* Initial position */
   --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
+  --card: oklch(0.99 0.01 240); /* Very light, subtle blue tint for light mode card background */
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -47,10 +47,23 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* New card background colors for light mode */
-  --card-bg-1: oklch(0.95 0.05 240); /* Very light blue */
-  --card-bg-2: oklch(0.95 0.05 300); /* Very light purple */
-  --card-bg-3: oklch(0.95 0.05 90); /* Very light orange */
+  /* New card background colors for light mode (more subtle) - these are for the About page cards */
+  --card-bg-1: oklch(0.98 0.02 260); /* Very light cool blue */
+  --card-bg-2: oklch(0.98 0.02 100); /* Very light warm green */
+  --card-bg-3: oklch(0.98 0.02 320); /* Very light soft pink */
+
+  /* Light Mode Badge Colors (more refined) */
+  --badge-bg-light-1: oklch(0.95 0.03 240); /* Light Blue */
+  --badge-text-light-1: oklch(0.3 0.08 240); /* Dark Blue */
+  --badge-hover-light-1: oklch(0.9 0.05 240);
+
+  --badge-bg-light-2: oklch(0.95 0.03 120); /* Light Green */
+  --badge-text-light-2: oklch(0.3 0.08 120); /* Dark Green */
+  --badge-hover-light-2: oklch(0.9 0.05 120);
+
+  --badge-bg-light-3: oklch(0.95 0.03 300); /* Light Purple */
+  --badge-text-light-3: oklch(0.3 0.08 300); /* Dark Purple */
+  --badge-hover-light-3: oklch(0.9 0.05 300);
 }
 
 .dark {
@@ -66,7 +79,7 @@
   --background-position: 0% 0%; /* Initial position */
 
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.16 0 0); /* Made card background noticeably lighter than main background */
+  --card: oklch(0.1 0.01 240); /* Very dark, subtle blue tint for dark mode card background */
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.16 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -97,10 +110,23 @@
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
 
-  /* New card background colors for dark mode */
-  --card-bg-1: oklch(0.25 0.1 240); /* Darker blue */
-  --card-bg-2: oklch(0.25 0.1 300); /* Darker purple */
-  --card-bg-3: oklch(0.25 0.1 90); /* Darker orange */
+  /* New card background colors for dark mode (more subtle) - these are for the About page cards */
+  --card-bg-1: oklch(0.2 0.02 260); /* Dark cool blue */
+  --card-bg-2: oklch(0.2 0.02 100); /* Dark warm green */
+  --card-bg-3: oklch(0.2 0.02 320); /* Dark soft pink */
+
+  /* Dark Mode Badge Colors (more refined) */
+  --badge-bg-dark-1: oklch(0.2 0.03 240); /* Dark Blue */
+  --badge-text-dark-1: oklch(0.8 0.08 240); /* Light Blue */
+  --badge-hover-dark-1: oklch(0.25 0.05 240);
+
+  --badge-bg-dark-2: oklch(0.2 0.03 120); /* Dark Green */
+  --badge-text-dark-2: oklch(0.8 0.08 120); /* Light Green */
+  --badge-hover-dark-2: oklch(0.25 0.05 120);
+
+  --badge-bg-dark-3: oklch(0.2 0.03 300); /* Dark Purple */
+  --badge-text-dark-3: oklch(0.8 0.08 300); /* Light Purple */
+  --badge-hover-dark-3: oklch(0.25 0.05 300);
 }
 
 @theme inline {
