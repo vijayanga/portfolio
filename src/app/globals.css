@@ -46,6 +46,11 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* New card background colors for light mode */
+  --card-bg-1: oklch(0.95 0.05 240); /* Very light blue */
+  --card-bg-2: oklch(0.95 0.05 300); /* Very light purple */
+  --card-bg-3: oklch(0.95 0.05 90); /* Very light orange */
 }
 
 .dark {
@@ -91,6 +96,11 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* New card background colors for dark mode */
+  --card-bg-1: oklch(0.25 0.1 240); /* Darker blue */
+  --card-bg-2: oklch(0.25 0.1 300); /* Darker purple */
+  --card-bg-3: oklch(0.25 0.1 90); /* Darker orange */
 }
 
 @theme inline {
@@ -161,6 +171,11 @@
     animation: gradient-shift 40s ease infinite; /* Speed adjusted to 40s */
     background-attachment: fixed; /* Keep background fixed while scrolling */
     @apply text-foreground scroll-smooth;
+  }
+  /* New utility class for frosted glass effect */
+  .backdrop-blur-sm-custom {
+    backdrop-filter: blur(8px); /* Adjust blur amount as needed */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
   }
 }
 

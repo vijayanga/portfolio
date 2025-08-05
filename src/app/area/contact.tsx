@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import {
   Card,
@@ -51,7 +50,6 @@ export default function Contact() {
             projects.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold text-foreground mb-6">
@@ -62,7 +60,6 @@ export default function Contact() {
               want to say hello, I'd love to hear from you. Feel free to reach
               out!
             </p>
-
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="text-blue-600 mr-4" size={24} />
@@ -73,7 +70,6 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-center">
                 <Phone className="text-blue-600 mr-4" size={24} />
                 <div>
@@ -81,7 +77,6 @@ export default function Contact() {
                   <p className="text-muted-foreground">+94 78 3530 855</p>
                 </div>
               </div>
-
               <div className="flex items-center">
                 <MapPin className="text-blue-600 mr-4" size={24} />
                 <div>
@@ -91,8 +86,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          <Card className="bg-card">
+          <Card className="bg-[var(--card-bg-1)]/80 backdrop-blur-sm-custom border border-border">
             <CardHeader>
               <CardTitle className="text-foreground">
                 Send me a message
@@ -112,7 +106,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-input text-foreground border-border"
+                    className="bg-background/80 backdrop-blur-sm-custom text-foreground border-border"
                   />
                 </div>
                 <div>
@@ -123,7 +117,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-input text-foreground border-border"
+                    className="bg-background/80 backdrop-blur-sm-custom text-foreground border-border"
                   />
                 </div>
                 <div>
@@ -134,7 +128,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="bg-input text-foreground border-border"
+                    className="bg-background/80 backdrop-blur-sm-custom text-foreground border-border"
                   />
                 </div>
                 <Button type="submit" className="w-full">

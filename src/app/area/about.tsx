@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Code, Coffee, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image"; // Import Image component
 
 export default function About() {
   return (
@@ -19,10 +20,14 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="animate-in fade-in slide-in-from-left-8 duration-1000 ease-out">
-            <img
+            {/* Using Next.js Image component for optimization */}
+            <Image
               src="/aboutme.jpg"
               alt="Vijayanga Dissanayaka working on a laptop"
-              className="rounded-lg shadow-xl w-full h-90 object-cover"
+              width={600} // Provide appropriate width
+              height={450} // Provide appropriate height (approx 90 * 5 = 450)
+              className="rounded-lg shadow-xl w-full h-[22.5rem] object-cover" // Changed h-90 to h-[22.5rem]
+              priority // If this image is above the fold
             />
           </div>
 
@@ -53,7 +58,7 @@ export default function About() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 ease-out">
-              <Card className="hover:shadow-md transition-shadow duration-200 bg-card">
+              <Card className="hover:shadow-md transition-shadow duration-200 bg-[var(--card-bg-1)]">
                 <CardContent className="p-6 text-center">
                   <GraduationCap
                     className="mx-auto mb-4 text-blue-600"
@@ -69,7 +74,7 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-md transition-shadow duration-200 bg-card">
+              <Card className="hover:shadow-md transition-shadow duration-200 bg-[var(--card-bg-2)]">
                 <CardContent className="p-6 text-center">
                   <Code className="mx-auto mb-4 text-purple-600" size={40} />
                   <h3 className="font-semibold text-foreground">Projects</h3>
@@ -82,7 +87,7 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-md transition-shadow duration-200 bg-card">
+              <Card className="hover:shadow-md transition-shadow duration-200 bg-[var(--card-bg-3)]">
                 <CardContent className="p-6 text-center">
                   <Coffee className="mx-auto mb-4 text-orange-600" size={40} />
                   <h3 className="font-semibold text-foreground">Experience</h3>
@@ -97,7 +102,11 @@ export default function About() {
             </div>
 
             <div className="mt-8 text-center md:text-left animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 ease-out">
-              <Button size="lg" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-4 bg-background/80 backdrop-blur-sm-custom border-2 border-border hover:border-blue-500 hover:bg-background/90 transform transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
                 <Link
                   href="#projects"
                   className="flex items-center justify-center md:inline-flex"
