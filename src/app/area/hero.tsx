@@ -77,12 +77,6 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center bg-background pt-16 relative overflow-hidden"
     >
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Adjusted colors for better dark mode visibility */}
-        <div className="absolute -top-10 -right-40 w-80 h-80 bg-blue-200 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-200 dark:bg-pink-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Profile Image with enhanced styling */}

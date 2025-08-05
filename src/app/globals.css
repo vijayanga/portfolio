@@ -4,7 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  /* Animated background for light mode with VERY LIGHT colors */
+  --background: radial-gradient(circle at 10% 20%, oklch(0.99 0.15 240) 0%, transparent 40%), /* Very Light Vibrant Blue */
+    radial-gradient(circle at 90% 80%, oklch(0.99 0.15 300) 0%, transparent 40%), /* Very Light Vibrant Purple */
+    radial-gradient(circle at 50% 0%, oklch(0.99 0.15 60) 0%, transparent 40%), /* Very Light Vibrant Yellow */
+    radial-gradient(circle at 0% 100%, oklch(0.99 0.15 180) 0%, transparent 40%), /* Very Light Vibrant Cyan */
+    radial-gradient(circle at 100% 0%, oklch(0.99 0.15 10) 0%, transparent 40%), /* Very Light Vibrant Red */
+    radial-gradient(circle at 20% 80%, oklch(0.99 0.15 120) 0%, transparent 40%), /* Very Light Vibrant Green */
+    radial-gradient(circle at 80% 20%, oklch(0.99 0.15 330) 0%, transparent 40%); /* Very Light Vibrant Magenta */
+  --background-size: 400% 400%; /* Even larger for more movement */
+  --background-position: 0% 0%; /* Initial position */
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -40,7 +49,17 @@
 }
 
 .dark {
-  --background: oklch(0.08 0 0); /* Made background even darker */
+  /* Animated background for dark mode with MORE DARK colors */
+  --background: radial-gradient(circle at 10% 20%, oklch(0.18 0.15 240) 0%, transparent 40%), /* Darker Vibrant Blue */
+    radial-gradient(circle at 90% 80%, oklch(0.18 0.15 300) 0%, transparent 40%), /* Darker Vibrant Purple */
+    radial-gradient(circle at 50% 0%, oklch(0.18 0.15 60) 0%, transparent 40%), /* Darker Vibrant Yellow */
+    radial-gradient(circle at 0% 100%, oklch(0.18 0.15 180) 0%, transparent 40%), /* Darker Vibrant Cyan */
+    radial-gradient(circle at 100% 0%, oklch(0.18 0.15 10) 0%, transparent 40%), /* Darker Vibrant Red */
+    radial-gradient(circle at 20% 80%, oklch(0.18 0.15 120) 0%, transparent 40%), /* Darker Vibrant Green */
+    radial-gradient(circle at 80% 20%, oklch(0.18 0.15 330) 0%, transparent 40%); /* Darker Vibrant Magenta */
+  --background-size: 400% 400%; /* Even larger for more movement */
+  --background-position: 0% 0%; /* Initial position */
+
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.16 0 0); /* Made card background noticeably lighter than main background */
   --card-foreground: oklch(0.985 0 0);
@@ -66,7 +85,7 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
@@ -113,12 +132,35 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground scroll-smooth;
+    /* Apply the animated background */
+    background-image: var(--background);
+    background-size: var(--background-size);
+    animation: gradient-shift 40s ease infinite; /* Speed adjusted to 40s */
+    background-attachment: fixed; /* Keep background fixed while scrolling */
+    @apply text-foreground scroll-smooth;
   }
 }
 
