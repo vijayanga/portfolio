@@ -4,13 +4,17 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Common/navbar";
 import Footer from "./Common/footer";
+import { ThemeProvider } from "./Common/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Doe - IT Student Portfolio",
+  title: "Vijayanga Dissanayaka's Portfolio",
+  icons: {
+    icon: "/logo/logo.png", // Link to the logo image file located in the 'public' folder
+  },
   description:
-    "Portfolio website of John Doe, IT undergraduate student showcasing projects and skills",
+    "Portfolio website of Vijayanga Dissanayaka , IT undergraduate student showcasing projects and skills",
 };
 
 export default function RootLayout({
@@ -19,11 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class" // This tells next-themes to add 'dark' class to html
+          defaultTheme="system" // Default to system theme
+          enableSystem // Enable system theme detection
+          disableTransitionOnChange // Disable transitions on theme change
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

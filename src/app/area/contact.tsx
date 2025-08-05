@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import {
   Card,
@@ -40,60 +39,59 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             I'm always open to discussing new opportunities and interesting
             projects.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className="text-2xl font-semibold text-foreground mb-6">
               Let's work together
             </h3>
-            <p className="text-gray-600 mb-8">
+            <p className="text-muted-foreground mb-8">
               Whether you have a project in mind, want to collaborate, or just
               want to say hello, I'd love to hear from you. Feel free to reach
               out!
             </p>
-
             <div className="space-y-4">
               <div className="flex items-center">
                 <Mail className="text-blue-600 mr-4" size={24} />
                 <div>
-                  <p className="font-semibold text-gray-900">Email</p>
-                  <p className="text-gray-600">vijayanga123@gmail.com</p>
+                  <p className="font-semibold text-foreground">Email</p>
+                  <p className="text-muted-foreground">
+                    vijayanga123@gmail.com
+                  </p>
                 </div>
               </div>
-
               <div className="flex items-center">
                 <Phone className="text-blue-600 mr-4" size={24} />
                 <div>
-                  <p className="font-semibold text-gray-900">Phone</p>
-                  <p className="text-gray-600">+94 78 3530 855</p>
+                  <p className="font-semibold text-foreground">Phone</p>
+                  <p className="text-muted-foreground">+94 78 3530 855</p>
                 </div>
               </div>
-
               <div className="flex items-center">
                 <MapPin className="text-blue-600 mr-4" size={24} />
                 <div>
-                  <p className="font-semibold text-gray-900">Location</p>
-                  <p className="text-gray-600">Colombo ,Sri Lanka</p>
+                  <p className="font-semibold text-foreground">Location</p>
+                  <p className="text-muted-foreground">Colombo ,Sri Lanka</p>
                 </div>
               </div>
             </div>
           </div>
-
-          <Card>
+          <Card className="bg-[var(--card-bg-1)]/80 backdrop-blur-sm-custom border border-border">
             <CardHeader>
-              <CardTitle>Send me a message</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-foreground">
+                Send me a message
+              </CardTitle>
+              <CardDescription className="text-muted-foreground">
                 Fill out the form below and I'll get back to you as soon as
                 possible.
               </CardDescription>
@@ -108,6 +106,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    className="bg-background/80 backdrop-blur-sm-custom text-foreground border-border"
                   />
                 </div>
                 <div>
@@ -118,6 +117,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="bg-background/80 backdrop-blur-sm-custom text-foreground border-border"
                   />
                 </div>
                 <div>
@@ -128,6 +128,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    className="bg-background/80 backdrop-blur-sm-custom text-foreground border-border"
                   />
                 </div>
                 <Button type="submit" className="w-full">

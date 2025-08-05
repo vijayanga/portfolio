@@ -51,13 +51,13 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             My <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Here are some of the projects I've worked on during my studies and
             personal time.
           </p>
@@ -67,7 +67,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-[var(--card-bg-2)]"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -77,10 +77,10 @@ export default function Projects() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-gray-900">
+                <CardTitle className="text-xl font-semibold text-foreground">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-gray-600">
+                <CardDescription className="text-muted-foreground">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -90,7 +90,7 @@ export default function Projects() {
                     <Badge
                       key={techIndex}
                       variant="outline"
-                      className="text-xs"
+                      className="text-xs dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
                     >
                       {tech}
                     </Badge>
