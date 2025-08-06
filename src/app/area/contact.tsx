@@ -88,7 +88,7 @@ export default function Contact() {
           </div>
           <Card className="bg-[var(--card-bg-1)]/80 backdrop-blur-sm-custom border border-border">
             <CardHeader>
-              <CardTitle className="text-foreground">
+              <CardTitle className="text-foreground mt-2.5">
                 Send me a message
               </CardTitle>
               <CardDescription className="text-muted-foreground">

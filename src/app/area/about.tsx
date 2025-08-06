@@ -29,34 +29,6 @@ export default function About() {
               className="rounded-lg shadow-xl w-full h-[22.5rem] object-cover" // Changed h-90 to h-[22.5rem]
               priority // If this image is above the fold
             />
-          </div>
-
-          <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-1000 ease-out">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I’m currently pursuing a BSc (Hons) in Information Technology at
-              the University of Moratuwa, where I’ve built a strong foundation
-              in programming, database management, and software development. My
-              tech journey began with an interest in how websites work and has
-              evolved into a passion for creating practical, user-friendly
-              applications.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Throughout my studies, I’ve gained hands-on experience with a
-              variety of technologies, including React, Node.js, Django, and
-              database systems. I focus on writing clean, scalable code while
-              keeping UX/UI principles in mind to create engaging user
-              experiences. I’m committed to staying up-to-date with the latest
-              trends in tech and enjoy participating in tech communities and
-              personal projects.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I’m eager to contribute to projects that make a meaningful impact
-              and help businesses innovate with technology. If you’re looking
-              for a dedicated, passionate developer with a diverse skill set,
-              feel free to explore my work and get in touch!
-            </p>
-
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 ease-out">
               <Card className="hover:shadow-md transition-shadow duration-200 bg-[var(--card-bg-1)]">
                 <CardContent className="p-6 text-center">
@@ -100,6 +72,33 @@ export default function About() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+
+          <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-1000 ease-out">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              I’m currently pursuing a BSc (Hons) in Information Technology at
+              the University of Moratuwa, where I’ve built a strong foundation
+              in programming, database management, and software development. My
+              tech journey began with an interest in how websites work and has
+              evolved into a passion for creating practical, user-friendly
+              applications.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Throughout my studies, I’ve gained hands-on experience with a
+              variety of technologies, including React, Node.js, Django, and
+              database systems. I focus on writing clean, scalable code while
+              keeping UX/UI principles in mind to create engaging user
+              experiences. I’m committed to staying up-to-date with the latest
+              trends in tech and enjoy participating in tech communities and
+              personal projects.
+            </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              I’m eager to contribute to projects that make a meaningful impact
+              and help businesses innovate with technology. If you’re looking
+              for a dedicated, passionate developer with a diverse skill set,
+              feel free to explore my work and get in touch!
+            </p>
 
             <div className="mt-8 text-center md:text-left animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 ease-out">
               <Button
