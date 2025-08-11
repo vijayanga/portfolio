@@ -20,11 +20,16 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
+    setStatus("Sending...");
+    // Simulate API call
     console.log("Form submitted:", formData);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log("Form submitted:", formData);
+    setStatus("Message sent successfully!");
     // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
@@ -88,7 +93,7 @@ export default function Contact() {
           </div>
           <Card className="bg-[var(--card-bg-1)]/80 backdrop-blur-sm-custom border border-border">
             <CardHeader>
-              <CardTitle className="text-foreground">
+              <CardTitle className="text-foreground mt-2.5">
                 Send me a message
               </CardTitle>
               <CardDescription className="text-muted-foreground">
@@ -135,6 +140,11 @@ export default function Contact() {
                   <Send className="mr-2" size={16} />
                   Send Message
                 </Button>
+                {status && (
+                  <p className="mt-4 text-center text-lg font-medium text-primary-light">
+                    {status}
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>

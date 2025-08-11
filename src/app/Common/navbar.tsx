@@ -45,7 +45,7 @@ export default function Navbar() {
             <img
               src="/logo/logo.png"
               alt="Portfolio Logo"
-              className="w-10 h-10 mask-radial-center" // Adjusted size for better fit
+              className="w-10 h-10 mask-radial-center mr-1.5" // Adjusted size for better fit
             />
             <span className="text-2xl font-bold gradient-text">Portfolio</span>
           </Link>

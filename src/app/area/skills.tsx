@@ -70,7 +70,7 @@ export default function Skills() {
               <Card
                 key={index}
                 className={cn(
-                  "hover:shadow-lg transition-shadow duration-300 backdrop-blur-sm-custom border border-border ",
+                  "hover:shadow-lg transition-shadow duration-300 backdrop-blur-sm-custom border border-border py-3 ",
                   "bg-[var(--card-bg-3)]" // Use the --card variable with transparency
                 )}
               >
