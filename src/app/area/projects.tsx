@@ -59,8 +59,8 @@ export default function Projects() {
             My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Here are some of the projects I've worked on during my studies and
-            personal time.
+            Here are some of the projects I&apos;ve worked on during my studies
+            and personal time.
           </p>
         </div>
 
@@ -71,9 +71,11 @@ export default function Projects() {
               className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-[var(--card-bg-2)]"
             >
               <div className="aspect-video overflow-hidden">
-                <img
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
+                  width={500} // Adjust the width as needed
+                  height={300} // Adjust the height as needed
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
