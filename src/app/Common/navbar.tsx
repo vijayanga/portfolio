@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -42,10 +43,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           {/* Logo Image and Text */}
           <Link href="/" className="flex items-center ">
-            <img
+            <Image
               src="/logo/logo.png"
               alt="Portfolio Logo"
-              className="w-10 h-10 mask-radial-center mr-1.5" // Adjusted size for better fit
+              width={40} // Adjust width as needed
+              height={40} // Adjust height as needed
+              className="mask-radial-center mr-1.5"
             />
             <span className="text-2xl font-bold gradient-text">Portfolio</span>
           </Link>

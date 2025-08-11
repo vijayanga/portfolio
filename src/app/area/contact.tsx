@@ -51,19 +51,19 @@ export default function Contact() {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm always open to discussing new opportunities and interesting
+            I&apos;m always open to discussing new opportunities and interesting
             projects.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold text-foreground mb-6">
-              Let's work together
+              Let&apos;s work together
             </h3>
             <p className="text-muted-foreground mb-8">
               Whether you have a project in mind, want to collaborate, or just
-              want to say hello, I'd love to hear from you. Feel free to reach
-              out!
+              want to say hello, I&apos;d love to hear from you. Feel free to
+              reach out!
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
@@ -97,7 +97,7 @@ export default function Contact() {
                 Send me a message
               </CardTitle>
               <CardDescription className="text-muted-foreground">
-                Fill out the form below and I'll get back to you as soon as
+                Fill out the form below and I&apos;ll get back to you as soon as
                 possible.
               </CardDescription>
             </CardHeader>
