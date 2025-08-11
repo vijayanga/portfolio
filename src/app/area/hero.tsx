@@ -52,7 +52,7 @@ export default function Hero() {
   const handleDownloadCV = () => {
     // Create a temporary link to download CV
     const link = document.createElement("a");
-    link.href = "/cv/Mycv.pdf"; // You'll need to add your CV to public/cv/
+    link.href = "/cv/Vijayanga.pdf"; // You'll need to add your CV to public/cv/
     link.download = "Vijayanga_Dissanayaka_CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -148,7 +148,8 @@ export default function Hero() {
             variant="outline"
             size="lg"
             className="text-lg px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-border hover:border-blue-500 hover:bg-blue-50 transform transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl
-            dark:bg-gray-800/80 dark:hover:border-blue-400 dark:hover:bg-gray-700"
+  dark:bg-gray-800/80 dark:hover:border-blue-400 dark:hover:bg-gray-700"
+            onClick={handleDownloadCV} // <-- Add this line
           >
             <Download className="mr-2" size={20} />
             Download CV
