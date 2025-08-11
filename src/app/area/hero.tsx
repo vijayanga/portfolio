@@ -61,7 +61,7 @@ export default function Hero() {
 
   if (isLoading) {
     return (
-      <section className="min-h-screen flex items-center justify-center bg-background pt-16">
+      <section className="min-h-screen flex items-center justify-center bg-background pt-16 ">
         <div className="animate-pulse text-center">
           <div className="w-48 h-48 bg-gray-300 rounded-full mx-auto mb-8 dark:bg-gray-700"></div>
           <div className="h-8 bg-gray-300 rounded w-96 mx-auto mb-4 dark:bg-gray-700"></div>
@@ -78,7 +78,7 @@ export default function Hero() {
     >
       {/* Background decorative elements */}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 mt-2">
         {/* Profile Image with enhanced styling */}
         <div className="mb-8 relative group">
           <div className="relative">
