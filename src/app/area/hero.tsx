@@ -109,7 +109,7 @@ export default function Hero() {
 
         {/* Main heading with enhanced styling */}
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in-up">
-          I'm <span className="gradient-text">Vijayanga Dissanayaka</span>
+          I&apos;m <span className="gradient-text">Vijayanga Dissanayaka</span>
         </h1>
 
         {/* Typing animation for role */}

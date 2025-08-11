@@ -13,8 +13,8 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate IT undergraduate student with a love for technology
-            and problem-solving.
+            I&apos;m a passionate IT undergraduate student with a love for
+            technology and problem-solving.
           </p>
         </div>
 
