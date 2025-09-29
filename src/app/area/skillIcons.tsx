@@ -1,0 +1,66 @@
+import {
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaJava,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiBootstrap,
+  SiExpress,
+  SiPhp,
+  SiMongodb,
+  SiMysql,
+  SiVercel,
+  SiFigma,
+  SiTestinglibrary,
+  SiJirasoftware,
+} from "react-icons/si";
+
+import { SiMui } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
+import {
+  FaUserFriends,
+  FaLightbulb,
+  FaUsersCog,
+  FaUserTie,
+  FaPalette,
+} from "react-icons/fa";
+import { MdGroups } from "react-icons/md";
+
+export const skillIcons: Record<string, React.ReactNode> = {
+  React: <FaReact className="text-sky-400" />,
+  "Next.js": <SiNextdotjs className="text-black dark:text-white" />,
+  TypeScript: <SiTypescript className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-400" />,
+  HTML5: <FaHtml5 className="text-orange-500" />,
+  CSS3: <FaCss3Alt className="text-blue-400" />,
+  "Tailwind CSS": <SiTailwindcss className="text-cyan-400" />,
+  Bootstrap: <SiBootstrap className="text-purple-600" />,
+  "Material-UI": <SiMui className="text-blue-700" />,
+  "Node.js": <FaNodeJs className="text-green-600" />,
+  "Express.js": <SiExpress className="text-gray-700 dark:text-white" />,
+  Python: <FaPython className="text-yellow-400" />,
+  Java: <FaJava className="text-red-500" />,
+  PHP: <SiPhp className="text-indigo-500" />,
+  "REST APIs": <SiVercel className="text-black dark:text-white" />,
+  MySQL: <SiMysql className="text-blue-600" />,
+  MsSQL: <span className="text-red-700">MSSQL</span>,
+  MongoDB: <SiMongodb className="text-green-700" />,
+  Git: <FaGitAlt className="text-orange-600" />,
+  "VS Code": <TbBrandVscode className="text-blue-500" />,
+  Figma: <SiFigma className="text-pink-500" />,
+  Testing: <SiTestinglibrary className="text-red-400" />,
+  "Agile Methodology": <SiJirasoftware className="text-blue-400" />,
+  "Problem Solving": <FaLightbulb className="text-yellow-500" />,
+  "Team Collaboration": <FaUserFriends className="text-green-500" />,
+  Leadership: <FaUserTie className="text-indigo-600" />,
+  "UI/UX Design": <FaPalette className="text-pink-400" />,
+  Teamwork: <MdGroups className="text-blue-400" />,
+};
