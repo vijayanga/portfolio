@@ -2,7 +2,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils"; // Assuming cn utility is available
+import { cn } from "@/lib/utils";
+import { skillIcons } from "./skillIcons";
 
 const skillCategories = [
   {
@@ -86,13 +87,16 @@ export default function Skills() {
                       return (
                         <Badge
                           key={skillIndex}
-                          variant="secondary" // Keep variant secondary for base styling if needed, but override colors
+                          variant="secondary"
                           className={cn(
-                            "text-sm py-1 px-3 border border-transparent rounded-full",
+                            "flex items-center gap-2 text-sm py-1 px-3 border border-transparent rounded-full",
                             `bg-[${colors.lightBg}] text-[${colors.lightText}] hover:bg-[${colors.lightHover}]`,
                             `dark:bg-[${colors.darkBg}] dark:text-[${colors.darkText}] dark:hover:bg-[${colors.darkHover}]`
                           )}
                         >
+                          {skillIcons[skill] && (
+                            <span className="text-lg">{skillIcons[skill]}</span>
+                          )}
                           {skill}
                         </Badge>
                       );
