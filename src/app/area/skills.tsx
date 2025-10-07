@@ -22,11 +22,28 @@ const skillCategories = [
   },
   {
     title: "Backend Development",
-    skills: ["Node.js", "Express.js", "Python", "Java", "PHP", "REST APIs"],
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "Java",
+      "PHP",
+      "C#",
+      "C",
+      "REST APIs",
+    ],
   },
   {
     title: "Database & Tools",
-    skills: ["MySQL", "MsSQL", "MongoDB", "Git", "VS Code", "Figma"],
+    skills: [
+      "MySQL",
+      "PostgreSQL",
+      "MsSQL",
+      "MongoDB",
+      "Git",
+      "VS Code",
+      "Figma",
+    ],
   },
   {
     title: "Other Skills",
