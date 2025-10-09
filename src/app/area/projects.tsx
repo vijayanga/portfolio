@@ -13,39 +13,39 @@ import Image from "next/image"; // Import Image component
 
 const projects = [
   {
-    title: "E-Commerce Website",
+    title: "Garage Management Project",
     description:
-      "A full-stack e-commerce platform built with React and Node.js, featuring user authentication, product catalog, and payment integration.",
+      "I developed an efficient and scalable Garage Appointment Management System that integrates key user modules, including Customer, Manager, Supervisor, and Technician. The system optimizes the appointment scheduling process, ensuring timely service delivery and enhancing workflow efficiency. It streamlines the overall operations, reducing delays and improving service quality. The solution is designed to be flexible and scalable, accommodating future growth and changes in the garage's operational needs.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#",
+    technologies: ["React", "Node.js", "MongoDB", "Express.js"],
+    //  liveUrl: "#",
+    githubUrl: "https://github.com/orgs/Bytebuilder2-0/repositories",
   },
   {
-    title: "Task Management App",
+    title: "Tic Tac Toe Hardware Project",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      "I designed an innovative Tic Tac Toe game featuring three modes: Double Player, Single Player, and RFID, each providing a unique experience. The game integrates an advanced illumination system, using LED lights to visually enhance player interaction and highlight game progress. In Double Player Mode, players engage in real-time, with seamless hardware-software communication for instant move updates. RFID integration allows players to place moves with RFID tags, blending physical and digital elements for an immersive, interactive gameplay experience.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-    liveUrl: "#",
-    githubUrl: "#",
+    technologies: ["Arduino Mega", "ESP32", "C++", "FireBase", "RFID"],
+    // liveUrl: "#",
+    githubUrl: "https://github.com/vijayanga/tic-tac-toe-game.git",
   },
   {
-    title: "Weather Dashboard",
+    title: "Teacher On website ",
     description:
-      "A responsive weather application that provides current weather conditions and forecasts using external APIs with beautiful data visualizations.",
+      "I developed an Online Tuition Platform for students, featuring an intuitive frontend design. The platform allows students to view available classes and select classes based on their preferences. This user-friendly interface streamlines the process of class selection and enhances the overall student experience.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["React", "Chart.js", "Weather API", "CSS3"],
-    liveUrl: "#",
+    technologies: ["Html", "Css", "js"],
+    // liveUrl: "#",
     githubUrl: "#",
   },
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio website showcasing my projects and skills, built with modern web technologies and optimized for performance.",
+      "I developed a portfolio website to showcase my skills, projects, and contact details. The site highlights my technical expertise with an intuitive design,seamless navigation, and responsive layout, offering a professional platform for potential employers and clients to learn more about my work and easily get in touch.",
     image: "/placeholder.svg?height=300&width=400",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    liveUrl: "#",
+    // liveUrl: "#",
     githubUrl: "#",
   },
 ];
@@ -100,16 +100,6 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Button size="sm" asChild>
-                    <Link
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="mr-2" size={16} />
-                      Live Demo
-                    </Link>
-                  </Button>
                   <Button variant="outline" size="sm" asChild>
                     <Link
                       href={project.githubUrl}
