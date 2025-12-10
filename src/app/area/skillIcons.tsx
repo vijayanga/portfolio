@@ -21,9 +21,6 @@ import {
   SiFigma,
   SiTestinglibrary,
   SiJirasoftware,
-  SiPostgresql,
-  SiSharp,
-  SiC,
 } from "react-icons/si";
 
 import { SiMui } from "react-icons/si";
@@ -59,9 +56,6 @@ export const skillIcons: Record<string, React.ReactNode> = {
   Git: <FaGitAlt className="text-orange-600" />,
   "VS Code": <TbBrandVscode className="text-blue-500" />,
   Figma: <SiFigma className="text-pink-500" />,
-  PostgreSQL: <SiPostgresql className="text-blue-400" />,
-  "C#": <SiSharp className="text-purple-600" />,
-  C: <SiC className="text-gray-700 dark:text-white" />,
   Testing: <SiTestinglibrary className="text-red-400" />,
   "Agile Methodology": <SiJirasoftware className="text-blue-400" />,
   "Problem Solving": <FaLightbulb className="text-yellow-500" />,
